@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food Project | Menu</title>
+  <link rel="icon" href="Images/Logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Text&family=Honk&family=Jaro:opsz@6..72&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Madimi+One&family=Merriweather:wght@700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Pacifico&family=Poetsen+One&family=Protest+Riot&family=Reddit+Mono:wght@200..900&family=Roboto+Slab:wght@100..900&family=Roboto:wght@900&family=Sixtyfour&family=Workbench&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/a2bc6a1181.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  body {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url("Images/MenuBackground.jpg");
+  }
+  .container-fluid {
+    box-sizing: border-box;
+  }
+  .card {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .card img {
+    height: 300px;
+    border-radius: 0;
+  }
+  .btn-contact-form {
+    background: #000000;
+    color: white;
+    margin: auto;
+    display: block;
+  }
+  .btn-contact-form:hover {
+    background: #3F0713;
+    color: white;
+    text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;
+  }
+  .card-footer {
+    text-align: center;
+  }
+  .btn-contact-form:active {
+    background: #3F0713 !important;
+    color: white !important;
+    text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;
+    box-shadow: none !important;
+  }
+</style>
+<style>
+  @media (max-width: 768px) {
+    .navbar .container-fluid {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .navbar-brand {
+      margin-bottom: 1rem;
+    }
+    .navbar-nav {
+      text-align: center;
+    }
+    .navbar-nav .nav-item {
+      margin-bottom: 0.5rem;
+    }
+    .navbar-collapse {
+      justify-content: flex-start;
+    }
+  }
+  @media (max-width: 768px) {
+    .about-header {
+      font-size: 2rem;
+      margin-top: 10vh;
+    }
+    .about-content {
+      padding: 1rem;
+      text-align: justify;
+    }
+    .about-img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+  }
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top" style="background: #3F0713;">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="Images/Logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+        <span class="text-white" style="font-family: Jaro; font-size: 2.5rem; text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;">Food Project</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"><button class="button-74" role="button">Home</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><button class="button-74" role="button">About</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html"><button class="button-74" role="button">Menu</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"><button class="button-74" role="button">Contact Us</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html"><button class="button-74" role="button" id="button-order">Order Now!</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html"><i class="fa-solid fa-circle-user fa-2xl" id="icon-user" title="User"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <h1 style="margin: auto; margin-top: 20vh; margin-bottom: 10vh; text-align: center; font-size: 5rem; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713; background-color: black; width: 50%; border: 10px ridge #3F0713; border-radius: 10px;"><font color="white" face="Jaro">OUR MENU</font></h1>
+  </header>
+  <main>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100" style="background-color: #FFFAE6;">
+          <div class="card-header text-center" style="background-color: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;">
+            <font face="Outfit" color="white" size="5rem"><b>DELUXE CHORIZO BURGER</b></font>
+          </div>
+          <img src="Images/ChorizoBurger.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center"><font face="Outfit"><b>Price: ₱210</b></font></h5>
+            <p class="card-text text-center"><font face="Outfit">A juicy chorizo patty topped with fresh lettuce, tomatoes, and a tangy special sauce, all nestled in a sesame seed bun.</font></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary"><button type="submit" class="btn btn-contact-form" style="text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;" onclick="addItemAlert('Deluxe Chorizo Burger')"><font face="Outfit">ADD ITEM</font></button></small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100" style="background-color: #FFFAE6;">
+          <div class="card-header text-center" style="background-color: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;">
+            <font face="Outfit" color="white" size="5rem"><b>CHICKEN BURGER SUPREME</b></font>
+          </div>
+          <img src="Images/ChickenBurger.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center"><font face="Outfit"><b>Price: ₱180</b></font></h5>
+            <p class="card-text text-center"><font face="Outfit">Fried chicken breast with a cheesy surprise, crispy lettuce, and creamy avocado spread, served on a toasted brioche bun.</font></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary"><button type="submit" class="btn btn-contact-form" style="text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;" onclick="addItemAlert('Chicken Burger Supreme')"><font face="Outfit">ADD ITEM</font></button></small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100" style="background-color: #FFFAE6;">
+          <div class="card-header text-center" style="background-color: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;">
+            <font face="Outfit" color="white" size="5rem"><b>FISH FILLET DELIGHT</b></font>
+          </div>
+          <img src="Images/FishBurger.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center"><font face="Outfit"><b>Price: ₱200</b></font></h5>
+            <p class="card-text text-center"><font face="Outfit">Lightly battered fish fillet with crisp lettuce, tartar sauce, and jalapenos on a soft, buttery bun.</font></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary"><button type="submit" class="btn btn-contact-form" style="text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;" onclick="addItemAlert('Fish Fillet Delight')"><font face="Outfit">ADD ITEM</font></button></small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100" style="background-color: #FFFAE6;">
+          <div class="card-header text-center" style="background-color: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;">
+            <font face="Outfit" color="white" size="5rem"><b>CHEEZY ADOBO PIZZA</b></font>
+          </div>
+          <img src="Images/AdoboPizza.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center"><font face="Outfit"><b>Price: ₱320</b></font></h5>
+            <p class="card-text text-center"><font face="Outfit">A fusion of Filipino adobo and Italian pizza, loaded with shredded adobo meat, mozzarella cheese, and a sprinkle of green onions.</font></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary"><button type="submit" class="btn btn-contact-form" style="text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;" onclick="addItemAlert('Cheezy Adobo Pizza')"><font face="Outfit">ADD ITEM</font></button></small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100" style="background-color: #FFFAE6;">
+          <div class="card-header text-center" style="background-color: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;">
+            <font face="Outfit" color="white" size="5rem"><b>SUNRISE THIN-CRUST</b></font>
+          </div>
+          <img src="Images/SunrizePizza.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center"><font face="Outfit"><b>Price: ₱300</b></font></h5>
+            <p class="card-text text-center"><font face="Outfit">A thin-crust pizza topped with a fried egg, longanisa sausage, fried onions, garlic chili, and a blend of cheeses for a tasty bite.</font></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary"><button type="submit" class="btn btn-contact-form" style="text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;" onclick="addItemAlert('Sunrise Thin-Crust')"><font face="Outfit">ADD ITEM</font></button></small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100" style="background-color: #FFFAE6;">
+          <div class="card-header text-center" style="background-color: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;">
+            <font face="Outfit" color="white" size="5rem"><b>CORNED BEEF BURRITO</b></font>
+          </div>
+          <img src="Images/CornedBeefBurrito.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center"><font face="Outfit"><b>Price: ₱180</b></font></h5>
+            <p class="card-text text-center"><font face="Outfit">Hearty corned beef, cheesy, fluffy scrambled eggs, and Mexican fried rice wrapped in a soft tortilla, perfect for a filling meal.</font></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary"><button type="submit" class="btn btn-contact-form" style="text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;" onclick="addItemAlert('Corned Beef Burrito')"><font face="Outfit">ADD ITEM</font></button></small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100" style="background-color: #FFFAE6;">
+          <div class="card-header text-center" style="background-color: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;">
+            <font face="Outfit" color="white" size="5rem"><b>LOCOS SISIG TACOS</b></font>
+          </div>
+          <img src="Images/SisigTacos.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center"><font face="Outfit"><b>Price: ₱150</b></font></h5>
+            <p class="card-text text-center"><font face="Outfit">Savory sisig with onions and chilies, served in soft corn tortillas and topped with cheese, a squeeze of lime, and cilantro.</font></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary"><button type="submit" class="btn btn-contact-form" style="text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;" onclick="addItemAlert('Locos Sisig Tacos')"><font face="Outfit">ADD ITEM</font></button></small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100" style="background-color: #FFFAE6;">
+          <div class="card-header text-center" style="background-color: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;">
+            <font face="Outfit" color="white" size="5rem"><b>ANIMAL-STYLE SISIG FRIES</b></font>
+          </div>
+          <img src="Images/SisigFries.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title text-center"><font face="Outfit"><b>Price: ₱190</b></font></h5>
+            <p class="card-text text-center"><font face="Outfit">Crispy fries smothered in a flavorful sisig mix, cheese sauce, and grilled onions, perfect for sharing or indulging on your own.</font></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary"><button type="submit" class="btn btn-contact-form" style="text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;" onclick="addItemAlert('Animal-Style Sisig Fries')"><font face="Outfit">ADD ITEM</font></button></small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100" style="background-color: #FFFAE6;">
+          <div class="card-header text-center" style="background-color: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;">
+            <font face="Outfit" color="white" size="5rem"><b>ADOBO-STYLE CHICKEN WINGS</b></font>
+          </div>
+          <img src="Images/AdoboWings.jpeg" class="card-img-top" alt="...">
+          <div class="card-body text-center">
+            <h5 class="card-title text-center"><font face="Outfit"><b>Price: ₱250</b></font></h5>
+            <p class="card-text text-center"><font face="Outfit">Tender chicken wings marinated and cooked in a rich adobo sauce, offering a burst of savory and tangy flavors.</font></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-body-secondary"><button type="submit" class="btn btn-contact-form" style="text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;" onclick="addItemAlert('Adobo Chicken Wings')"><font face="Outfit">ADD ITEM</font></button></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="text-center text-lg-start text-white" style="background-color: #3F0713; margin-top: 10vh;">
+    <div class="container p-4 pb-0 footer-style">
+      <section class="">
+        <div class="row d-flex justify-content-around">
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase" style="text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font color="white" face="Jaro" size="6rem">FOOD PROJECT</font></h5>
+            <p style="text-align: justify; text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font color="white" face="Roboto Slab">
+              Welcome to Food Project, where we explore and celebrate the euphoria that food brings us. We prioritize quality over quantity, and our prices cater to everyone.
+            </font></p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase" style="text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font color="white" face="Jaro" size="6rem">ABOUT US</font></h5>
+            <p style="text-align: justify; text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font color="white" face="Roboto Slab">
+              We believe in the power of food to bring people happiness, and our mission is to create a space where everyone can enjoy the comfort of a truly delicious meal.
+            </font></p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase" style="text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font color="white" face="Jaro" size="6rem">CONTACT</font></h5>
+            <p style="text-align: justify; text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font color="white" face="Roboto Slab">
+              Do you have any questions or feedback? We would love to hear from all of you! Reach out to us at contact@foodproject.com or follow us on our social media channels for the latest updates.
+            </font></p>
+          </div>
+        </div>
+      </section>
+      <hr class="styled-hr" style="margin-bottom: 20px;"/>
+      <section class="mb-4 text-center footer-btn-style">
+        <a
+        class="btn btn-outline-dark btn-floating m-1 icon-style"
+        href="https://www.facebook.com/" target="_blank"
+        role="button"
+        ><i class="fab fa-facebook-f"></i></a>
+        <a
+        class="btn btn-outline-dark btn-floating m-1 icon-style"
+        href="https://x.com/" target="_blank"
+        role="button"
+        ><i class="fab fa-twitter"></i></a>
+        <a
+        class="btn btn-outline-dark btn-floating m-1 icon-style"
+        href="https://www.instagram.com/" target="_blank"
+        role="button"
+        ><i class="fab fa-instagram"></i></a>
+        <a
+        class="btn btn-outline-dark btn-floating m-1 icon-style"
+        href="https://www.tiktok.com/" target="_blank"
+        role="button"
+        ><i class="fab fa-tiktok"></i></a>
+      </section>
+    </div>
+    <div class="text-center p-3 end-links" style="background-color: rgba(0, 0, 0, 0.2); display: flex; justify-content: space-evenly; font-family: Roboto;">
+      <p style="color: white; text-shadow: 1px 1px 1px black, -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black;">
+        <b>© 2024 Copyright: <a href="index.html">Food Project</a></b>
+      </p>
+      <p style="color: white; text-shadow: 1px 1px 1px black, -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black;">
+        <b>Email: <a href="mailto:nathan.alisangco@gmail.com">contact@foodproject.com</a></b>
+      </p>
+      <p style="color: white; text-shadow: 1px 1px 1px black, -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black;">
+        <b>Contact Number: <a href="index.html">0917-168-0474</a></b>
+      </p>
+    </div>
+  </footer>
+  <script>
+    function addItemAlert(itemName) {
+      alert(itemName + ' has been added to your cart!');
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

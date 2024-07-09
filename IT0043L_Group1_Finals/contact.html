@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food Project | Contact Us</title>
+  <link rel="icon" href="Images/Logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/a2bc6a1181.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-image: url("Images/FormBackground.jpg");
+    }
+    #contact-form {
+      margin: auto;
+      width: 50%;
+      font-weight: bold;
+      font-family: "Outfit";
+      margin-top: 5vh;
+      margin-bottom: 15vh;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .btn-contact-form {
+      background: #000000;
+      color: white;
+    }
+
+    .btn-contact-form:hover {
+      background: #3F0713;
+      color: white;
+      text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;
+    }
+
+    .btn-contact-form:active {
+      background: #3F0713 !important;
+      color: white !important;
+      text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;
+      box-shadow: none !important;
+    }
+  </style>
+  <style>
+    @media (max-width: 767px) {
+      .navbar-brand span {
+        font-size: 1.5rem;
+      }
+      .navbar-nav .nav-link {
+        font-size: 1rem;
+      }
+      .navbar-collapse {
+        text-align: center;
+      }
+    }
+    @media (max-width: 767px) {
+      #contact-form {
+        width: 90%;
+        margin-top: 2vh;
+        margin-bottom: 10vh;
+      }
+      #section-contact h1 {
+        font-size: 2rem;
+        width: 80%;
+      }
+      .card-header {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top" style="background: #3F0713;">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="Images/Logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+        <span class="text-white" style="font-family: Jaro; font-size: 2.5rem; text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;">Food Project</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"><button class="button-74" role="button">Home</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><button class="button-74" role="button">About</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html"><button class="button-74" role="button">Menu</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"><button class="button-74" role="button">Contact Us</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="order.html"><button class="button-74" role="button" id="button-order">Order Now!</button></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html"><i class="fa-solid fa-circle-user fa-2xl" id="icon-user" title="User"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section id="section-contact">
+      <h1 style="margin: auto; margin-top: 20vh; text-align: center; font-size: 5rem; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713; background-color: black; width: 50%; border: 10px ridge #3F0713; border-radius: 10px;"><font color="white" face="Jaro">CONTACT US</font></h1>
+      <div class="card" id="contact-form">
+        <div class="card-header" style="text-align: center; background: #000000; color: white; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;">
+          <font color="white" face="Roboto Slab" size="5rem">CONTACT FORM</font>
+        </div>
+        <div class="card-body">
+          <form action="mailto:contact@foodproject.com" method="post" enctype="text/plain">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter name here" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter email here" required>
+            </div>
+            <div class="mb-3">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="subject" class="form-control" id="subject" name="subject" placeholder="Enter subject here" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px" required></textarea>
+              <div id="emailHelp" class="form-text">Note: Your responses are very much appreciated! :)</div>
+            </div>
+            <div class="mb-3">
+              <label for="file" class="form-label">Attach File (Optional)</label>
+              <input type="file" class="form-control" id="file" name="file">
+            </div>
+            <div class="center">
+              <button type="submit" class="btn btn-contact-form" style="text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713;">SUBMIT</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="text-center text-lg-start text-white" style="background-color: #3F0713;">
+    <div class="container p-4 pb-0 footer-style">
+      <section class="">
+        <div class="row d-flex justify-content-around">
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase" style="text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font color="white" face="Jaro" size="6rem">FOOD PROJECT</font></h5>
+            <p style="text-align: justify; text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font color="white" face="Roboto Slab">
+              Welcome to Food Project, where we explore and celebrate the euphoria that food brings us. We prioritize quality over quantity, and our prices cater to everyone.
+            </font></p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase" style="text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font color="white" face="Jaro" size="6rem">ABOUT US</font></h5>
+            <p style="text-align: justify; text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font color="white" face="Roboto Slab">
+              We believe in the power of food to bring people happiness, and our mission is to create a space where everyone can enjoy the comfort of a truly delicious meal.
+            </font></p>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase" style="text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font color="white" face="Jaro" size="6rem">CONTACT</font></h5>
+            <p style="text-align: justify; text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font color="white" face="Roboto Slab">
+              Do you have any questions or feedback? We would love to hear from all of you! Reach out to us at contact@foodproject.com or follow us on our social media channels for the latest updates.
+            </font></p>
+          </div>
+        </div>
+      </section>
+      <hr class="styled-hr" style="margin-bottom: 20px;"/>
+      <section class="mb-4 text-center footer-btn-style">
+        <a
+        class="btn btn-outline-dark btn-floating m-1 icon-style"
+        href="https://www.facebook.com/" target="_blank"
+        role="button"
+        ><i class="fab fa-facebook-f"></i></a>
+        <a
+        class="btn btn-outline-dark btn-floating m-1 icon-style"
+        href="https://x.com/" target="_blank"
+        role="button"
+        ><i class="fab fa-twitter"></i></a>
+        <a
+        class="btn btn-outline-dark btn-floating m-1 icon-style"
+        href="https://www.instagram.com/" target="_blank"
+        role="button"
+        ><i class="fab fa-instagram"></i></a>
+        <a
+        class="btn btn-outline-dark btn-floating m-1 icon-style"
+        href="https://www.tiktok.com/" target="_blank"
+        role="button"
+        ><i class="fab fa-tiktok"></i></a>
+      </section>
+    </div>
+    <div class="text-center p-3 end-links" style="background-color: rgba(0, 0, 0, 0.2); display: flex; justify-content: space-evenly; font-family: Roboto;">
+      <p style="color: white; text-shadow: 1px 1px 1px black, -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black;">
+        <b>© 2024 Copyright: <a href="index.html">Food Project</a></b>
+      </p>
+      <p style="color: white; text-shadow: 1px 1px 1px black, -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black;">
+        <b>Email: <a href="mailto:nathan.alisangco@gmail.com">contact@foodproject.com</a></b>
+      </p>
+      <p style="color: white; text-shadow: 1px 1px 1px black, -1px -1px 1px black, 1px -1px 1px black, -1px 1px 1px black;">
+        <b>Contact Number: <a href="index.html">0917-168-0474</a></b>
+      </p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

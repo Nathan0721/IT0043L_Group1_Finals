@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Project | Order</title>
+    <link rel="icon" href="Images/Logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Text&family=Honk&family=Jaro:opsz@6..72&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Madimi+One&family=Merriweather:wght@700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Pacifico&family=Poetsen+One&family=Protest+Riot&family=Reddit+Mono:wght@200..900&family=Roboto+Slab:wght@100..900&family=Roboto:wght@900&family=Sixtyfour&family=Workbench&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a2bc6a1181.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-image: url("Images/OrderBackground.jpg");
+        }
+        header {
+            background-color: #3F0713;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            font-family: "Jaro";
+            border-bottom: 10px ridge white;
+        }
+        footer {
+            background-color: #f1f1f1;
+            color: #000;
+            text-align: center;
+            padding: 1em;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 1200px;
+            width: 100%;
+            padding: 0 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            width: 30%;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 5px 10px;
+            background-color: #CCC8B3;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            color: white;
+            background-color: #3F0713;
+        }
+        #scrollButton {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        #scrollButton:hover {
+            color: white;
+            background-color: black;
+        }
+        @media (max-width: 768px) {
+            .product {
+                width: 45%;
+            }
+        }
+        @media (max-width: 480px) {
+            .product {
+                width: 100%;
+            }
+        }
+        #icon-home, #icon-user {
+            color: white;
+        }
+        #icon-home:hover {
+            color: #FFD93D;
+        }
+        #icon-home:active {
+            color: lightgoldenrodyellow;
+        }
+        #icon-user:hover {
+            color: aqua;
+        }
+        #icon-user:active {
+            color: paleturquoise;
+        }
+        .card-img-top {
+            height: 200px;
+        }
+    </style>
+    <style>
+        @media (max-width: 768px) {
+            header div {
+                flex-direction: column;
+                align-items: center;
+            }
+            header h1 {
+                font-size: 2rem;
+                margin: 10px 0;
+            }
+            #icon-home, #icon-user {
+                font-size: 1.5rem;
+            }
+            .product {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            #icon-home, #icon-user {
+                font-size: 1.2rem;
+            }
+            .container h1 {
+                font-size: 2rem;
+                margin-top: 3vh;
+                margin-bottom: 3vh;
+            }
+            button {
+                font-size: 1rem;
+                padding: 5px;
+            }
+            #orderButton {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="index.html"><i class="fa-solid fa-house-chimney fa-2xl" id="icon-home"></i></a>
+            <h1 style="text-shadow: 2px 2px 2px black, -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black;"><font size="10rem">SHOPPING CART</font></h1>
+            <a href="login.html"><i class="fa-solid fa-circle-user fa-2xl" id="icon-user"></i></a>
+        </div>
+    </header>   
+    <div class="container">
+        <h1 class="text-center" style="font-family: Jaro; font-size: 4rem; color: black; text-shadow: 2px 2px 2px white, -2px -2px 2px white, 2px -2px 2px white, -2px 2px 2px white; margin-top: 5vh; margin-bottom: 5vh;">Your Order</h1>
+        <div class="products">
+            <div class="product" style="background-color: #FFFAE6; border-radius: 10px;">
+                <h2 style="background: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713; padding-bottom: 5px; border-radius: 10px;"><font face="Jaro" color="white">Deluxe Chorizo Burger</font></h2>
+                <img src="Images/ChorizoBurger.jpg" class="card-img-top">
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <p><font face="Outfit" size="5rem"><b>₱210</b></font></p>
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <button style="border-radius: 10px;" onclick="addToCart('Deluxe Chorizo Burger', 210.00)"><font face="Outfit">Add To Cart</font></button>
+                <button style="border-radius: 10px;" onclick="removeFromCart('Deluxe Chorizo Burger', 210.00)"><font face="Outfit">Remove From Cart</font></button>
+            </div>
+            <div class="product" style="background-color: #FFFAE6; border-radius: 10px;">
+                <h2 style="background: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713; padding-bottom: 5px; border-radius: 10px;"><font face="Jaro" color="white">Chicken Burger Supreme</font></h2>
+                <img src="Images/ChickenBurger.jpg" class="card-img-top">
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <p><font face="Outfit" size="5rem"><b>₱180</b></font></p>
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <button style="border-radius: 10px;" onclick="addToCart('Chicken Burger Supreme', 180.00)"><font face="Outfit">Add To Cart</font></button>
+                <button style="border-radius: 10px;" onclick="removeFromCart('Chicken Burger Supreme', 180.00)"><font face="Outfit">Remove From Cart</font></button>
+            </div>
+            <div class="product" style="background-color: #FFFAE6; border-radius: 10px;">
+                <h2 style="background: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713; padding-bottom: 5px; border-radius: 10px;"><font face="Jaro" color="white">Fish Fillet Delight</font></h2>
+                <img src="Images/FishBurger.jpg" class="card-img-top">
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <p><font face="Outfit" size="5rem"><b>₱200</b></font></p>
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <button style="border-radius: 10px;" onclick="addToCart('Fish Fillet Delight', 200.00)"><font face="Outfit">Add To Cart</font></button>
+                <button style="border-radius: 10px;" onclick="removeFromCart('Fish Fillet Delight', 200.00)"><font face="Outfit">Remove From Cart</font></button>
+            </div>
+            <div class="product" style="background-color: #FFFAE6; border-radius: 10px;">
+                <h2 style="background: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713; padding-bottom: 5px; border-radius: 10px;"><font face="Jaro" color="white">Cheezy Adobo Pizza</font></h2>
+                <img src="Images/AdoboPizza.png" class="card-img-top">
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <p><font face="Outfit" size="5rem"><b>₱320</b></font></p>
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <button style="border-radius: 10px;" onclick="addToCart('Cheezy Adobo Pizza', 320.00)"><font face="Outfit">Add To Cart</font></button>
+                <button style="border-radius: 10px;" onclick="removeFromCart('Cheezy Adobo Pizza', 320.00)"><font face="Outfit">Remove From Cart</font></button>
+            </div>
+            <div class="product" style="background-color: #FFFAE6; border-radius: 10px;">
+                <h2 style="background: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713; padding-bottom: 5px; border-radius: 10px;"><font face="Jaro" color="white">Sunrise Thin-Crust</font></h2>
+                <img src="Images/SunrizePizza.jpg" class="card-img-top">
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <p><font face="Outfit" size="5rem"><b>₱300</b></font></p>
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <button style="border-radius: 10px;" onclick="addToCart('Sunrise Thin-Crust', 300.00)"><font face="Outfit">Add To Cart</font></button>
+                <button style="border-radius: 10px;" onclick="removeFromCart('Sunrise Thin-Crust', 300.00)"><font face="Outfit">Remove From Cart</font></button>
+            </div>
+            <div class="product" style="background-color: #FFFAE6; border-radius: 10px;">
+                <h2 style="background: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713; padding-bottom: 5px; border-radius: 10px;"><font face="Jaro" color="white">Corned Beef Burrito</font></h2>
+                <img src="Images/CornedBeefBurrito.jpg" class="card-img-top">
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <p><font face="Outfit" size="5rem"><b>₱180</b></font></p>
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <button style="border-radius: 10px;" onclick="addToCart('Corned Beef Burrito', 180.00)"><font face="Outfit">Add To Cart</font></button>
+                <button style="border-radius: 10px;" onclick="removeFromCart('Corned Beef Burrito', 180.00)"><font face="Outfit">Remove From Cart</font></button>
+            </div>
+            <div class="product" style="background-color: #FFFAE6; border-radius: 10px;">
+                <h2 style="background: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713; padding-bottom: 5px; border-radius: 10px;"><font face="Jaro" color="white">Locos Sisig Tacos</font></h2>
+                <img src="Images/SisigTacos.jpg" class="card-img-top">
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <p><font face="Outfit" size="5rem"><b>₱150</b></font></p>
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <button style="border-radius: 10px;" onclick="addToCart('Locos Sisig Tacos', 150.00)"><font face="Outfit">Add To Cart</font></button>
+                <button style="border-radius: 10px;" onclick="removeFromCart('Locos Sisig Tacos', 150.00)"><font face="Outfit">Remove From Cart</font></button>
+            </div>
+            <div class="product" style="background-color: #FFFAE6; border-radius: 10px;">
+                <h2 style="background: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713; padding-bottom: 5px; border-radius: 10px;"><font face="Jaro" color="white">Animal-Style Sisig Fries</font></h2>
+                <img src="Images/SisigFries.jpg" class="card-img-top">
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <p><font face="Outfit" size="5rem"><b>₱190</b></font></p>
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <button style="border-radius: 10px;" onclick="addToCart('Animal-Style Sisig Fries', 190.00)"><font face="Outfit">Add To Cart</font></button>
+                <button style="border-radius: 10px;" onclick="removeFromCart('Animal-Style Sisig Fries', 190.00)"><font face="Outfit">Remove From Cart</font></button>
+            </div>
+            <div class="product" style="background-color: #FFFAE6; border-radius: 10px;">
+                <h2 style="background: black; text-shadow: 2px 2px 2px #3F0713, -2px -2px 2px #3F0713, 2px -2px 2px #3F0713, -2px 2px 2px #3F0713; padding-bottom: 5px; border-radius: 10px;"><font face="Jaro" color="white">Adobo Chicken Wings</font></h2>
+                <img src="Images/AdoboWings.jpeg" class="card-img-top">
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <p><font face="Outfit" size="5rem"><b>₱250</b></font></p>
+                <hr style="height: 1px; border: 2.5px ridge #3F0713; opacity: 0.5;">
+                <button style="border-radius: 10px;" onclick="addToCart('Adobo Chicken Wings', 250.00)"><font face="Outfit">Add To Cart</font></button>
+                <button style="border-radius: 10px;" onclick="removeFromCart('Adobo Chicken Wings', 250.00)"><font face="Outfit">Remove From Cart</font></button>
+            </div>
+        </div>
+        <h1 class="text-center" style="font-family: Jaro; font-size: 4rem; color: black; text-shadow: 2px 2px 2px white, -2px -2px 2px white, 2px -2px 2px white, -2px 2px 2px white; margin-top: 5vh; margin-bottom: 5vh;">Your Cart</h1>
+        <ul id="cart" style="font-family: Outfit; font-weight: bold;"></ul>
+        <p id="total" style="font-family: Outfit; font-weight: bold;">Total: ₱0.00</p>
+        <button style="border-radius: 10px;" id="orderButton"><font face="Outfit" size="5rem">ORDER!</font></button>
+    </div>
+    <footer style="background: #3F0713;">
+        <p><font color="white" face="Outfit">&copy; 2024 FoodProject. All rights reserved.</font></p>
+    </footer>
+    <button id="scrollButton" onclick="scrollToTop()">Scroll To Top</button>
+    <script>
+        let cart = [];
+        let total = 0.00;
+        function addToCart(product, price) {
+            cart.push({ product, price });
+            total += price;
+            updateCart();
+        }
+        function removeFromCart(product, price) {
+            const index = cart.findIndex(item => item.product === product && item.price === price);
+            if (index !== -1) {
+                cart.splice(index, 1);
+                total -= price;
+                updateCart();
+            }
+        }
+        function updateCart() {
+            const cartElement = document.getElementById('cart');
+            cartElement.innerHTML = '';
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.product} - ₱${item.price.toFixed(2)}`;
+                cartElement.appendChild(li);
+            });
+            const totalElement = document.getElementById('total');
+            totalElement.textContent = `Total: ₱${total.toFixed(2)}`;
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        window.onscroll = function() {
+            const scrollButton = document.getElementById('scrollButton');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        };
+        document.getElementById('orderButton').addEventListener('click', function() {
+            if (cart.length === 0) {
+                alert("Your shopping list is empty.");
+            } else {
+                alert("You have successfully ordered your items!");
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGzS5nQ32tY5PZ/2dC9KaDO8mQ4sF86dIHNDz6YwFG5E" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-GLhmf3tCgFTFhE1n00wAF4FO76iHozyRHLk65j9AsIPb4OH3K4uEr4B4H025JjEJ" crossorigin="anonymous"></script>
+</body>
+</html>
